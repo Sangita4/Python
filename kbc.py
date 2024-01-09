@@ -1,17 +1,28 @@
-def kbc(l):
+def kbc(q, l):
     count = 0
-    for i in l:
-        print(i)
-        # for j in l:
-        ans = input("Enter your answer:")
-        if ans != i[2]:
-            print("Sorry, Wrong answer")
-            break
+    for i in range(len(q)):
+        quetion = q[i]
+        #print(quetion)
+        print(f'Question for Rs. {l[i]}')
+        print(quetion[0])
+
+        print(f'a. {quetion[1]}                     b. {quetion[2]}')
+        print(f'c. {quetion[3]}                     d. {quetion[4]}')
+
+        ans = int(input("Enter your answer (1-4):"))
+        if (ans == quetion[-1]):
+            print(f"Your are absolatly correct, You won Rs. {l[i]}")
+            if i == 1:
+                money = 2000
+            else:
+                money = 1000
         else:
-            count += i[5]
-    print("You won:", count)
+            print(f"Wrong Answer")
+            break
 
-q = [["Who is the prime minister of India?", "1. Amit Shah", "2. Naredra Modi", "3. Devendra Fadanvis", "4. Raj Thakare", 1000], ["Who won ICC world cup 2023?", "1. India", "2. Austrulia", "3. Pak", "4. Japan", 2000]]
+q = [["Who is the prime minister of India?", "Amit Shah", "Naredra Modi", "Devendra Fadanvis", "Raj Thakare", 1], ["Who won ICC world cup 2023?", "India", "Pak", "Austrulia", "Japan", 2]]
 
-kbc(q)
+levels = [1000, 2000]
+
+kbc(q, levels)
 
