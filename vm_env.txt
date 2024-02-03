@@ -1,0 +1,15 @@
+- Create VM ENV
+python3 -m venv myenv
+
+pip3 install pandas
+
+pip3 install pandas==1.4.4
+
+deactivate ==> Close VM ENV
+source myenv/bin/activate  ==> Activate VM ENV
+
+pip install numpy
+
+pip freeze > requirements.txt
+
+pip install -r requirements.txt
