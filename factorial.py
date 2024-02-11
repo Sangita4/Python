@@ -3,7 +3,7 @@ def fac(n):
         return 1
     else: 
         return fac(n-1)*n
-print(fac(10))
+print(fac(5))
 
 
 def fac(n):
